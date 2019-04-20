@@ -7,19 +7,27 @@ using System.Data;
 using System.Data.SqlClient;
 
 
+
 namespace ToDoListLibrary
 {
     public class ToDoList
     {
-        public static void AddTask(string task,SqlConnection connection)
+        public static void AddTask(string connectionString, string values,string tblName)
         {
-            using(connection = new SqlConnection())
+            try
             {
-                connection.ConnectionString = "Data Source=RICHTOSHIBA;Initial Catalog = ToDoList;Integrated Security=true;";
-                using (SqlCommand insert = new SqlCommand($"INSERT INTO tbl_task (task) VALUES ('{task}')"))
+                using (SqlConnection connection = new SqlConnection(connectionString))
                 {
-                    insert.ExecuteNonQuery();
+                    connection.Open();
+                    using (SqlCommand insert = new SqlCommand($"INSERT INTO {tblName} VALUES ({values})", connection))
+                    {
+                        insert.ExecuteNonQuery();
+                    }
                 }
+            }
+            catch (SqlException)
+            {
+                throw;
             }
         }
     }

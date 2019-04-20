@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("ToDoList.ConsoleApp")]
+[assembly: AssemblyTitle("ToDoListConsoleApp")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ToDoList.ConsoleApp")]
+[assembly: AssemblyProduct("ToDoListConsoleApp")]
 [assembly: AssemblyCopyright("Copyright ©  2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("79fc9ed5-ea01-4e77-97f4-28ef89052d48")]
+[assembly: Guid("caa2f591-23e4-4053-85c6-8482e5f1f06b")]
 
 // Version information for an assembly consists of the following four values:
 //

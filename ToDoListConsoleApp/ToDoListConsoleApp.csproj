@@ -4,13 +4,14 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{79FC9ED5-EA01-4E77-97F4-28EF89052D48}</ProjectGuid>
+    <ProjectGuid>{CAA2F591-23E4-4053-85C6-8482E5F1F06B}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>ToDoList.ConsoleApp</RootNamespace>
-    <AssemblyName>ToDoList.ConsoleApp</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <RootNamespace>ToDoListConsoleApp</RootNamespace>
+    <AssemblyName>ToDoListConsoleApp</AssemblyName>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
