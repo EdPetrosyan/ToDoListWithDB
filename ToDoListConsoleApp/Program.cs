@@ -14,7 +14,13 @@ namespace ToDoListConsoleApp
         static void Main(string[] args)
         {
             string connectionString = "Data Source=RICHTOSHIBA;Initial Catalog=ToDoList;Integrated Security=True;";
-            ToDoList.AddTask(connectionString,"'Help'","tbl_task");
+
+            //ToDoList.AddTask(connectionString,"Help","tbl_task");
+            var datas = ToDoList.ReciveTasks(connectionString, "tbl_task");
+            foreach (DataRow item in datas.Rows)
+            {
+                Console.WriteLine(item["task"].ToString()); 
+            }
         }
     }
 }

@@ -19,7 +19,7 @@ namespace ToDoListLibrary
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
-                    using (SqlCommand insert = new SqlCommand($"INSERT INTO {tblName} VALUES ({values})", connection))
+                    using (SqlCommand insert = new SqlCommand($"INSERT INTO {tblName} VALUES ('{values}')", connection))
                     {
                         insert.ExecuteNonQuery();
                     }
@@ -30,5 +30,28 @@ namespace ToDoListLibrary
                 throw;
             }
         }
+
+        public static DataTable ReciveTasks(string connectionString, string tblName)
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+                    using (SqlCommand select = new SqlCommand($"SELECT * FROM {tblName}",connection))
+                    {
+                        SqlDataReader reader = select.ExecuteReader(CommandBehavior.CloseConnection);
+                        dt.Load(reader);
+                    }
+                }
+                return dt;
+            }
+            catch (SqlException)
+            {
+                throw;
+            }
+        }
+
     }
 }
